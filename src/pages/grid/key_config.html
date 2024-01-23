@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../styles/page-style.css">
+        <link rel="stylesheet" href="../styles/form-input.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="side-bar">
+                <h1>Som tum ma song</h1>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../list_bot.html">List Bot</a></li>
+                    <li><a href="../tutorial.html">Tutorial</a></li>
+                    <li><a href="../mail.html">Mail</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h2>Key Con fig</h2>
+                <div class="space-main">
+                    <form id="configForm" class="form-set">
+                        <div>
+                            <label for="apiKey">API Key</label>
+                            <input id="apiKey" name="apiKey" type="text">
+                        </div>
+                        <div>
+                            <label for="secretKey">Secret Key</label>
+                            <input id="secretKey" name="secretKey" type="text">
+                        </div>
+                        <div>
+                            <label for="amount">Amount coin</label>
+                            <input id="amount" name="amount" type="text"
+                                oninput="validateFloatInput(this)">
+                        </div>
+                        <div>
+                            <label for="budget">Budget</label>
+                            <input id="budget" name="budget" type="text"
+                                oninput="validateFloatInput(this)">
+                        </div>
+                        <div>
+                            <label for="exchangeName">Exchange name</label>
+                            <select name="exchangeName" id="exchangeName">
+                                <option value="Bybit">Bybit</option>
+                                <option value="Kraken">Kraken</option>
+                                <option value="Binance">Binance</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="zoneCalculator">Zone calculator</label>
+                            <select name="zoneCalculator" id="zoneCalculator">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="../js/input_float.js"></script>
+        <script type="module" src="./key_config.js"></script>
+    </body>
+</html>
